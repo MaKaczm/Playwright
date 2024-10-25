@@ -21,8 +21,8 @@ test('Test głównej strony Alior Bank', async ({ page }) => {
   const accountAplication = await page.locator('text=Wniosek o Konto Jakże Osobiste'); // Identyfikacja formularza
   await expect(accountAplication).toBeVisible(); // Sprawdzenie widoczności formularza
   
-  // 6. Sprawdź obecność linków w stopce, np. "Kontakt"  
-  await page.fill('[name="firstName"]', 'TwojeImie');
+  // 6. Wprowadz Imie  
+  await page.fill('[name="firstName"]', 'Janek');
   
   // 7. Kliknij w link "Kontakt" i sprawdź, czy otwiera się strona kontaktowa
   await footerLink.click(); // Kliknięcie w link "Kontakt"
